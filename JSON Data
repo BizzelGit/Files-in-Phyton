@@ -12,3 +12,24 @@ import json
 with open('message.json') as message_json:
  message = json.load(message_json)
 print(message['text'])
+
+
+__________________________________________
+
+In your workspace, we’ve put a dictionary called data_payload. We want to save this to a file called data.json.
+
+Let’s start by importing the json library.
+Open a new file object in the variable data_json. The filename should be 'data.json' and the file should be opened in write-mode.
+Call json.dump() with data_payload and data_json to convert our data to JSON and then save it to the file data.json.
+
+__________________________________________
+
+data_payload = [
+  {'interesting message': 'What is JSON? A web application\'s little pile of secrets.',
+   'follow up': 'But enough talk!'}
+]
+
+import json
+
+with open('data.json','w') as data_json:
+  json.dump(data_payload, data_json)
